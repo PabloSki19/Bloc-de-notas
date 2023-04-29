@@ -40,39 +40,107 @@ def abrir_archivo(event=None):
         area_texto.insert('insert', content)
         file.close()
         root.title(os.path.basename(url_archivo) + " | " + title)
+    
+    try:
+        hash_abierto = str(len(content))
+        archivo_abrir = open("data/abrir_archivo.txt", "w")
+        archivo_abrir.write(hash_abierto)
+        archivo_abrir.close()
+    except:
+        pass
 
 def salir(event=None):
-    valor = messagebox.askyesnocancel(message="¿Quieres guardar los cambios?", title="Bloc de notas")
-    if valor == True:
-        guardar()
-        root.destroy()
-    elif valor == False:
+    try:
+        contenido = str(len(area_texto.get(1.0,'end-1c')))
+        archivo_abierto = open("data/archivo_abierto.txt", "w")
+        archivo_abierto.write(contenido)
+        archivo_abierto.close()
+    except:
+        pass
+
+    archivo_abrir = open("data/abrir_archivo.txt", "r")
+    contenido_inicial = archivo_abrir.read()
+    archivo_abrir.close()
+
+    archivo_abierto = open("data/archivo_abierto.txt", "r")
+    contenido_final = archivo_abierto.read()
+    archivo_abierto.close()
+
+    if len(area_texto.get(1.0,'end-1c')) > 0:
+        if contenido_inicial != contenido_final:
+            valor = messagebox.askyesnocancel(message="¿Quieres guardar los cambios?", title="Bloc de notas")
+            if valor == True:
+                guardar()
+            elif valor == False:
+                pass
+            else:
+                return
         root.destroy()
     else:
-        return
+        root.destroy()
 
 root.protocol("WM_DELETE_WINDOW", salir)
 
 #Funciones generales
 def nuevo(event=None):
-    valor = messagebox.askyesnocancel(message="¿Quieres guardar los cambios?", title="Bloc de notas")
-    if valor == True:
-        guardar()
-        nuevo_archivo()
-    elif valor == False:
+    try:
+        contenido = str(len(area_texto.get(1.0,'end-1c')))
+        archivo_abierto = open("data/archivo_abierto.txt", "w")
+        archivo_abierto.write(contenido)
+        archivo_abierto.close()
+    except:
+        pass
+
+    archivo_abrir = open("data/abrir_archivo.txt", "r")
+    contenido_inicial = archivo_abrir.read()
+    archivo_abrir.close()
+
+    archivo_abierto = open("data/archivo_abierto.txt", "r")
+    contenido_final = archivo_abierto.read()
+    archivo_abierto.close()
+    
+    if len(area_texto.get(1.0,'end-1c')) > 0:
+        if contenido_inicial != contenido_final:
+            valor = messagebox.askyesnocancel(message="¿Quieres guardar los cambios?", title="Bloc de notas")
+            if valor == True:
+                guardar()
+            elif valor == False:
+                pass
+            else:
+                return
         nuevo_archivo()
     else:
-        return
+        nuevo_archivo
 
 def abrir(event=None):
-    valor = messagebox.askyesnocancel(message="¿Quieres guardar los cambios?", title="Bloc de notas")
-    if valor == True:
-        guardar()
-        abrir_archivo()
-    elif valor == False:
+    try:
+        contenido = str(len(area_texto.get(1.0,'end-1c')))
+        archivo_abierto = open("data/archivo_abierto.txt", "w")
+        archivo_abierto.write(contenido)
+        archivo_abierto.close()
+    except:
+        pass
+
+    archivo_abrir = open("data/abrir_archivo.txt", "r")
+    contenido_inicial = archivo_abrir.read()
+    archivo_abrir.close()
+
+    archivo_abierto = open("data/archivo_abierto.txt", "r")
+    contenido_final = archivo_abierto.read()
+    archivo_abierto.close()
+    
+    if len(area_texto.get(1.0,'end-1c')) > 0:
+        if contenido_inicial != contenido_final:
+            valor = messagebox.askyesnocancel(message="¿Quieres guardar los cambios?", title="Bloc de notas")
+            if valor == True:
+                guardar()
+            elif valor == False:
+                pass
+            else:
+                return
         abrir_archivo()
     else:
-        return
+        abrir_archivo()
 
 def guardar(event=None):
     global url_archivo
