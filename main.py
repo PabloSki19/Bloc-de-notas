@@ -43,7 +43,7 @@ def abrir_archivo(event=None):
     
     try:
         hash_abierto = str(len(content))
-        archivo_abrir = open("data/abrir_archivo.txt", "w")
+        archivo_abrir = open("data/archivo.txt", "w")
         archivo_abrir.write(hash_abierto)
         archivo_abrir.close()
     except:
@@ -58,7 +58,7 @@ def salir(event=None):
     except:
         pass
 
-    archivo_abrir = open("data/abrir_archivo.txt", "r")
+    archivo_abrir = open("data/archivo.txt", "r")
     contenido_inicial = archivo_abrir.read()
     archivo_abrir.close()
 
@@ -91,7 +91,7 @@ def nuevo(event=None):
     except:
         pass
 
-    archivo_abrir = open("data/abrir_archivo.txt", "r")
+    archivo_abrir = open("data/archivo.txt", "r")
     contenido_inicial = archivo_abrir.read()
     archivo_abrir.close()
 
@@ -121,7 +121,7 @@ def abrir(event=None):
     except:
         pass
 
-    archivo_abrir = open("data/abrir_archivo.txt", "r")
+    archivo_abrir = open("data/archivo.txt", "r")
     contenido_inicial = archivo_abrir.read()
     archivo_abrir.close()
 
@@ -162,7 +162,7 @@ def guardar(event=None):
     
     try:
         hash_abierto = str(len(content))
-        archivo_abrir = open("data/abrir_archivo.txt", "w")
+        archivo_abrir = open("data/archivo.txt", "w")
         archivo_abrir.write(hash_abierto)
         archivo_abrir.close()
     except:
@@ -181,7 +181,7 @@ def guardar_como(event=None):
     
     try:
         hash_abierto = str(len(content))
-        archivo_abrir = open("data/abrir_archivo.txt", "w")
+        archivo_abrir = open("data/archivo.txt", "w")
         archivo_abrir.write(hash_abierto)
         archivo_abrir.close()
     except:
