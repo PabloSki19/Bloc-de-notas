@@ -105,7 +105,7 @@ No, cualquier modificación de la fuente (tipo, estilo o tamaño) o del color (d
 
 ## Bugs conocidos
 
-1. Los usuarios de MacOS no pueden dar con el botón derecho del mouse en el texto para que aparezca el menú contextual. La solución es modificar <Button-3> por <Button-2> en la línea 536 de main.py para que quede de la siguiente manera:
+1. Los usuarios de MacOS no pueden dar con el botón derecho del mouse en el texto para que aparezca el menú contextual. La solución es modificar Button-3 por Button-2 en la línea 536 de main.py para que quede de la siguiente manera:
 
 ```bash
   root.bind("<Button-2>", hacer_contextual_texto)
