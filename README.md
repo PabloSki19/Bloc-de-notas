@@ -40,7 +40,7 @@ Para ejecutarlo, usar el siguente comando en una terminal:
   python main.py
 ```
 
-IMPORTANTE: Para una correcta ejecución, el archivo main.py tiene que estar en la misma carpeta con los iconos.
+IMPORTANTE: Para una correcta ejecución, el archivo main.py tiene que estar en una misma carpeta con las carpetas icons y data.
 
 
 ## Preguntas frecuentes
