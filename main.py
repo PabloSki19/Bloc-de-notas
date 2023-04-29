@@ -42,49 +42,37 @@ def abrir_archivo(event=None):
         root.title(os.path.basename(url_archivo) + " | " + title)
 
 def salir(event=None):
-    caracteres = len(area_texto.get(0.0,'end-1c').replace(' ',''))
-    if caracteres > 0:
-        valor = messagebox.askyesnocancel(message="¿Quieres guardar los cambios?", title="Bloc de notas")
-        if valor == True:
-            guardar()
-            root.destroy()
-        elif valor == False:
-            root.destroy()
-        else:
-            return
-    else:
+    valor = messagebox.askyesnocancel(message="¿Quieres guardar los cambios?", title="Bloc de notas")
+    if valor == True:
+        guardar()
         root.destroy()
+    elif valor == False:
+        root.destroy()
+    else:
+        return
 
 root.protocol("WM_DELETE_WINDOW", salir)
 
 #Funciones generales
 def nuevo(event=None):
-    caracteres = len(area_texto.get(0.0,'end-1c').replace(' ',''))
-    if caracteres > 0:
-        valor = messagebox.askyesnocancel(message="¿Quieres guardar los cambios?", title="Bloc de notas")
-        if valor == True:
-            guardar()
-            nuevo_archivo()
-        elif valor == False:
-            nuevo_archivo()
-        else:
-            return
-    else:
+    valor = messagebox.askyesnocancel(message="¿Quieres guardar los cambios?", title="Bloc de notas")
+    if valor == True:
+        guardar()
         nuevo_archivo()
+    elif valor == False:
+        nuevo_archivo()
+    else:
+        return
 
 def abrir(event=None):
-    caracteres = len(area_texto.get(0.0,'end-1c').replace(' ',''))
-    if caracteres > 0:
-        valor = messagebox.askyesnocancel(message="¿Quieres guardar los cambios?", title="Bloc de notas")
-        if valor == True:
-            guardar()
-            abrir_archivo()
-        elif valor == False:
-            abrir_archivo()
-        else:
-            return
-    else:
+    valor = messagebox.askyesnocancel(message="¿Quieres guardar los cambios?", title="Bloc de notas")
+    if valor == True:
+        guardar()
         abrir_archivo()
+    elif valor == False:
+        abrir_archivo()
+    else:
+        return
 
 def guardar(event=None):
     global url_archivo
