@@ -42,10 +42,10 @@ def abrir_archivo(event=None):
         root.title(os.path.basename(url_archivo) + " | " + title)
     
     try:
-        hash_abierto = str(len(content))
-        archivo_abrir = open("data/archivo.txt", "w")
-        archivo_abrir.write(hash_abierto)
-        archivo_abrir.close()
+        abierto = str(len(content))
+        archivo_abrir_guardar = open("data/archivo.txt", "w")
+        archivo_abrir_guardar.write(abierto)
+        archivo_abrir_guardar.close()
     except:
         pass
 
@@ -58,9 +58,9 @@ def salir(event=None):
     except:
         pass
 
-    archivo_abrir = open("data/archivo.txt", "r")
-    contenido_inicial = archivo_abrir.read()
-    archivo_abrir.close()
+    archivo_abrir_guardar = open("data/archivo.txt", "r")
+    contenido_inicial = archivo_abrir_guardar.read()
+    archivo_abrir_guardar.close()
 
     archivo_abierto = open("data/archivo_abierto.txt", "r")
     contenido_final = archivo_abierto.read()
@@ -91,9 +91,9 @@ def nuevo(event=None):
     except:
         pass
 
-    archivo_abrir = open("data/archivo.txt", "r")
-    contenido_inicial = archivo_abrir.read()
-    archivo_abrir.close()
+    archivo_abrir_guardar = open("data/archivo.txt", "r")
+    contenido_inicial = archivo_abrir_guardar.read()
+    archivo_abrir_guardar.close()
 
     archivo_abierto = open("data/archivo_abierto.txt", "r")
     contenido_final = archivo_abierto.read()
@@ -121,9 +121,9 @@ def abrir(event=None):
     except:
         pass
 
-    archivo_abrir = open("data/archivo.txt", "r")
-    contenido_inicial = archivo_abrir.read()
-    archivo_abrir.close()
+    archivo_abrir_guardar = open("data/archivo.txt", "r")
+    contenido_inicial = archivo_abrir_guardar.read()
+    archivo_abrir_guardar.close()
 
     archivo_abierto = open("data/archivo_abierto.txt", "r")
     contenido_final = archivo_abierto.read()
@@ -161,10 +161,10 @@ def guardar(event=None):
             file.close()
     
     try:
-        hash_abierto = str(len(content))
-        archivo_abrir = open("data/archivo.txt", "w")
-        archivo_abrir.write(hash_abierto)
-        archivo_abrir.close()
+        abierto = str(len(content))
+        archivo_abrir_guardar = open("data/archivo.txt", "w")
+        archivo_abrir_guardar.write(abierto)
+        archivo_abrir_guardar.close()
     except:
         pass
 
@@ -180,10 +180,10 @@ def guardar_como(event=None):
         file.close()
     
     try:
-        hash_abierto = str(len(content))
-        archivo_abrir = open("data/archivo.txt", "w")
-        archivo_abrir.write(hash_abierto)
-        archivo_abrir.close()
+        abierto = str(len(content))
+        archivo_abrir_guardar = open("data/archivo.txt", "w")
+        archivo_abrir_guardar.write(abierto)
+        archivo_abrir_guardar.close()
     except:
         pass
 
