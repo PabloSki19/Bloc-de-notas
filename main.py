@@ -159,6 +159,14 @@ def guardar(event=None):
             file.write(content)
             root.title(os.path.basename(url_archivo) + " | " + title)
             file.close()
+    
+    try:
+        hash_abierto = str(len(content))
+        archivo_abrir = open("data/abrir_archivo.txt", "w")
+        archivo_abrir.write(hash_abierto)
+        archivo_abrir.close()
+    except:
+        pass
 
 def guardar_como(event=None):
     global url_archivo
@@ -170,6 +178,14 @@ def guardar_como(event=None):
         file.write(content)
         root.title(os.path.basename(url_archivo) + " | " + title)
         file.close()
+    
+    try:
+        hash_abierto = str(len(content))
+        archivo_abrir = open("data/abrir_archivo.txt", "w")
+        archivo_abrir.write(hash_abierto)
+        archivo_abrir.close()
+    except:
+        pass
 
 def deshacer(event=None):
     try:
