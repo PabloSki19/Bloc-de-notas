@@ -14,10 +14,6 @@ Es una aplicación que sirve para ver y editar archivos de texto de la extensió
 
 ![Buscar / Reemplazar](https://raw.githubusercontent.com/PabloSki19/bloc-notas/main/assets/ventana-buscar.png)
 
-![Ayuda](https://raw.githubusercontent.com/PabloSki19/bloc-notas/main/assets/ventana-ayuda.png)
-
-![Acerca](https://raw.githubusercontent.com/PabloSki19/bloc-notas/main/assets/ventana-acerca.png)
-
 
 ## Características
 
@@ -35,20 +31,16 @@ IMPORTANTE: Tener instalado Python en su equipo (se recomenda la versión 3.11.2
 
 Hacer clic en el botón fork del repositorio con su cuenta de GitHub o descargarlo directamente de allí.
 
-Si quiere contribuir con el proyecto, puedes clonar el proyecto mediante:
-
-```bash
-  git clone https://github.com/PabloSki19/bloc-notas
-```
-
 
 ## Ejecución
 
-Para ejecutarlo, usar el siguente comando:
+Para ejecutarlo, usar el siguente comando en una terminal:
 
 ```bash
   python main.py
 ```
+
+IMPORTANTE: Para una correcta ejecución, el archivo main.py tiene que estar en la misma carpeta con los iconos.
 
 
 ## Preguntas frecuentes
@@ -78,10 +70,18 @@ Para cambiar el color de texto:
 2. Realice una de las acciones siguientes:
 
 • Para mover texto de un lugar a otro, selecciónelo, pulse o haga clic en el menú Editar y después pulse o haga clic en Cortar.
+
 • Para tener el mismo texto en dos lugares diferentes, selecciónelo, pulse o haga clic en el menú Editar y después pulse o haga clic en Copiar.
+
 • Para pegar texto que ha cortado o copiado, pulse o haga clic en el lugar del archivo donde desee pegar el texto, pulse o haga clic en el menú Editar y después pulse o haga clic en Pegar.
-• Para eliminar texto, selecciónelo, pulse o haga clic en el menú Editar y después pulse o haga clic en Eliminar. • Para deshacer la última acción, pulse o haga clic en el menú Editar y después pulse o haga clic en Deshacer.
-• Para rehacer la acción, pulse o haga clic en el menú Editar y después pulse o haga clic en Rehacer.  También, se pueden realizar las acciones mencionadas anteriormente con los iconos de la barra de herramientas, según correspondan.
+
+• Para eliminar texto, selecciónelo, pulse o haga clic en el menú Editar y después pulse o haga clic en Eliminar. 
+
+• Para deshacer la última acción, pulse o haga clic en el menú Editar y después pulse o haga clic en Deshacer.
+
+• Para rehacer la acción, pulse o haga clic en el menú Editar y después pulse o haga clic en Rehacer.
+
+También, se pueden realizar las acciones mencionadas anteriormente con los iconos de la barra de herramientas, según correspondan.
 
 #### ¿Cómo se buscan y reemplazan caracteres o palabras específicos?
 
@@ -119,9 +119,9 @@ No, cualquier modificación de la fuente (tipo, estilo o tamaño) o del color (d
 - Pablo Aguilar (GitHub: [@PabloSki19](https://github.com/PabloSki19))
 
 
-## Agradecimientos
+## Un especial agradecimiento al:
 
- - [CódigoFacilito](https://codigofacilito.com/)
+ - [Equipo de CódigoFacilito](https://codigofacilito.com/)
 
 
 ## Feedback
