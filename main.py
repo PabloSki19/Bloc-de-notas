@@ -42,7 +42,7 @@ def abrir_archivo(event=None):
         root.title(os.path.basename(url_archivo) + " | " + title)
     
     try:
-        abierto = str(hash(content))
+        abierto = str(len(content))
         archivo_abrir_guardar = open("data/archivo.txt", "w")
         archivo_abrir_guardar.write(abierto)
         archivo_abrir_guardar.close()
@@ -51,7 +51,7 @@ def abrir_archivo(event=None):
 
 def salir(event=None):
     try:
-        contenido = str(hash(area_texto.get(1.0,'end-1c')))
+        contenido = str(len(area_texto.get(1.0,'end-1c')))
         archivo_abierto = open("data/archivo_abierto.txt", "w")
         archivo_abierto.write(contenido)
         archivo_abierto.close()
@@ -84,7 +84,7 @@ root.protocol("WM_DELETE_WINDOW", salir)
 #Funciones generales
 def nuevo(event=None):
     try:
-        contenido = str(hash(area_texto.get(1.0,'end-1c')))
+        contenido = str(len(area_texto.get(1.0,'end-1c')))
         archivo_abierto = open("data/archivo_abierto.txt", "w")
         archivo_abierto.write(contenido)
         archivo_abierto.close()
@@ -114,7 +114,7 @@ def nuevo(event=None):
 
 def abrir(event=None):
     try:
-        contenido = str(hash(area_texto.get(1.0,'end-1c')))
+        contenido = str(len(area_texto.get(1.0,'end-1c')))
         archivo_abierto = open("data/archivo_abierto.txt", "w")
         archivo_abierto.write(contenido)
         archivo_abierto.close()
@@ -161,7 +161,7 @@ def guardar(event=None):
             file.close()
     
     try:
-        abierto = str(hash(content))
+        abierto = str(len(content))
         archivo_abrir_guardar = open("data/archivo.txt", "w")
         archivo_abrir_guardar.write(abierto)
         archivo_abrir_guardar.close()
@@ -180,7 +180,7 @@ def guardar_como(event=None):
         file.close()
     
     try:
-        abierto = str(hash(content))
+        abierto = str(len(content))
         archivo_abrir_guardar = open("data/archivo.txt", "w")
         archivo_abrir_guardar.write(abierto)
         archivo_abrir_guardar.close()
